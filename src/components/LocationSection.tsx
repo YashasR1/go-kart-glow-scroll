@@ -13,21 +13,25 @@ const LocationSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Find Us on the <span className="text-primary">Track</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Located in the heart of the city with easy access and premium facilities
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Image */}
+          {/* Left Column - Video */}
           <div className="relative">
-            <div className="aspect-square bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group">
-              <div className="w-full h-full bg-gradient-to-br from-muted to-card flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="w-16 h-16 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-semibold mb-2">Premium Facility</h3>
-                  <p className="text-muted-foreground">State-of-the-art racing complex with professional-grade tracks</p>
-                </div>
+            <div className="aspect-square bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              >
+                <source src="/GoKart video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Overlay with gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
               </div>
             </div>
           </div>
@@ -49,34 +53,12 @@ const LocationSection = () => {
             </div>
 
             {/* Location Details */}
-            <div className="bg-card border border-border rounded-xl p-6">
-              <h3 className="text-2xl font-bold mb-6">Track Information</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-medium">123 Racing Boulevard</p>
-                    <p className="text-muted-foreground text-sm">Speedway City, RC 12345</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-medium">Open Daily</p>
-                    <p className="text-muted-foreground text-sm">10:00 AM - 10:00 PM</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <div>
-                    <p className="font-medium">(555) 123-KART</p>
-                    <p className="text-muted-foreground text-sm">Call for reservations</p>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-card border border-border rounded-xl p-8 hover:border-primary transition-all duration-300">
+              <p className="text-lg leading-relaxed">
+                <span className="font-bold text-primary">The face of motorsport in India</span> is about to change forever. 
+                <span className="block mt-4">Get set to experience the <span className="text-accent font-semibold">best karting experience</span> in this state-of-the-art infrastructure.</span>
+                <span className="block mt-4 text-muted-foreground">The race track is located just <span className="text-foreground font-medium">2.5 KMS</span> from Kengeri on Mysore road and <span className="text-foreground font-medium">0.5 KMS</span> from the NICE road towards Mysore and has superb road links from the garden city.</span>
+              </p>
             </div>
           </div>
         </div>

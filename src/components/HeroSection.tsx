@@ -12,7 +12,7 @@ const HeroSection = () => {
       style={{
         backgroundImage: 'url(/lovable-uploads/5b49cc52-0bd9-426e-ae50-2810a3e072e3.png)',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: '0 -200px',
         backgroundRepeat: 'no-repeat'
       }}
     >
@@ -45,28 +45,16 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 -mt-20">
         <h1 className="text-6xl md:text-8xl font-bold mb-6 text-glow">
-          VELOCITY
-          <span className="block text-primary">KARTING</span>
+          <span className="block mb-[-10px]">GRIPS</span>
+          <span className="block text-primary">GOKARTING</span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        {/* <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Experience the ultimate racing adventure with our premium go-karts and professional tracks
-        </p>
-        <Button 
-          onClick={() => scrollToSection('karts')}
-          className="btn-racing text-lg"
-        >
-          Start Racing
-        </Button>
+        </p> */}
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
-        </div>
-      </div>
+      
     </section>
   );
 };

@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 racing-grid opacity-20" />
       
       {/* Navigation */}
-      <nav className="fixed top-8 left-8 z-50 flex flex-col gap-6">
+      <nav className="fixed top-8 right-8 z-50 flex flex-row gap-6">
         <button 
           onClick={() => scrollToSection('home')}
           className="nav-link text-lg font-medium"

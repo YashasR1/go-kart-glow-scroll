@@ -18,10 +18,10 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Racing Primary (Electric Blue) */
-    --primary: 200 100% 60%;
-    --primary-foreground: 0 0% 10%;
-    --primary-glow: 200 100% 80%;
+    /* Racing Primary (Racing Red) */
+    --primary: 0 85% 60%;
+    --primary-foreground: 0 0% 95%;
+    --primary-glow: 0 85% 80%;
 
     /* Secondary (Racing Silver) */
     --secondary: 0 0% 25%;
@@ -43,17 +43,17 @@
     /* Borders and Inputs */
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 200 100% 60%;
+    --ring: 0 85% 60%;
 
     /* Racing Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 100% 60%), hsl(200 100% 80%));
+    --gradient-primary: linear-gradient(135deg, hsl(0 85% 60%), hsl(0 85% 80%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 3%));
-    --gradient-racing: linear-gradient(45deg, hsl(200 100% 60%), hsl(120 100% 50%));
+    --gradient-racing: linear-gradient(45deg, hsl(0 85% 60%), hsl(120 100% 50%));
     
     /* Racing Shadows */
-    --shadow-glow: 0 0 30px hsl(200 100% 60% / 0.3);
+    --shadow-glow: 0 0 30px hsl(0 85% 60% / 0.3);
     --shadow-accent: 0 0 20px hsl(120 100% 50% / 0.4);
-    --shadow-intense: 0 0 50px hsl(200 100% 60% / 0.5);
+    --shadow-intense: 0 0 50px hsl(0 85% 60% / 0.5);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

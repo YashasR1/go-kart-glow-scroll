@@ -3,7 +3,7 @@ import { MapPin, Clock, Phone } from "lucide-react";
 const LocationSection = () => {
   const openMaps = () => {
     // Opens Google Maps with a sample location (you can change this)
-    window.open('https://maps.google.com/?q=Go+Kart+Track+Near+Me', '_blank');
+    window.open('https://maps.app.goo.gl/54VswPKNGydgNVPp9', '_blank');
   };
 
   return (

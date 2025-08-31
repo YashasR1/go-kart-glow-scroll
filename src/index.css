@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Racing-inspired design system with dark theme and neon accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Dark Theme */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card System */
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover System */
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Racing Primary (Electric Blue) */
+    --primary: 200 100% 60%;
+    --primary-foreground: 0 0% 10%;
+    --primary-glow: 200 100% 80%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary (Racing Silver) */
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Tones */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent (Neon Green) */
+    --accent: 120 100% 50%;
+    --accent-foreground: 0 0% 10%;
+    --accent-glow: 120 100% 70%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive (Racing Red) */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and Inputs */
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 200 100% 60%;
 
-    --radius: 0.5rem;
+    /* Racing Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 60%), hsl(200 100% 80%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 3%));
+    --gradient-racing: linear-gradient(45deg, hsl(200 100% 60%), hsl(120 100% 50%));
+    
+    /* Racing Shadows */
+    --shadow-glow: 0 0 30px hsl(200 100% 60% / 0.3);
+    --shadow-accent: 0 0 20px hsl(120 100% 50% / 0.4);
+    --shadow-intense: 0 0 50px hsl(200 100% 60% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-racing: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,6 +115,7 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  }
 }
 
 @layer base {
@@ -101,5 +125,79 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Navigation Glow Effects */
+  .nav-link {
+    @apply relative text-foreground transition-all duration-300 hover:text-primary;
+    text-shadow: 0 0 0 transparent;
+  }
+  
+  .nav-link:hover {
+    text-shadow: 0 0 10px hsl(var(--primary-glow) / 0.8);
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-primary transition-all duration-300;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+    box-shadow: 0 0 8px hsl(var(--primary-glow) / 0.6);
+  }
+
+  /* Racing Button */
+  .btn-racing {
+    @apply relative px-8 py-3 bg-card border border-border rounded-lg text-foreground font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+  }
+  
+  .btn-racing:hover {
+    @apply border-primary text-primary transform scale-105;
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Kart Card */
+  .kart-card {
+    @apply bg-card border border-border rounded-xl p-6 min-w-80 transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+  }
+  
+  .kart-card:hover {
+    @apply border-primary transform scale-105;
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Marquee Animation */
+  .marquee {
+    @apply flex gap-8;
+    animation: marquee 30s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Glowing Text */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.8);
+  }
+
+  /* Racing Grid */
+  .racing-grid {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }

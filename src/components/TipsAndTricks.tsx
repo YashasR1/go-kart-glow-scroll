@@ -6,32 +6,32 @@ const TipsAndTricks = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "Braking for Maximum Speed",
-      description: "Master the art of preserving momentum through corners",
-      content: "Confused !!! Yes braking is a very important technique to master to preserve your momentum through the corners. Most racers on the track go into some kind of 'race mode' where they lean forward in the seat and tuck in as they want to go faster and faster. This slows you down in the braking zones as you take weight off the rear wheels which need to bite in order to stop your kart. The tip is to keep your weight on the rear wheels and keep your head up which gives you more traction while braking."
+      description: "Maintain momentum through proper weight distribution",
+      content: "To maintain momentum, lean back during braking. This keeps weight on the rear wheels, maximizing traction and allowing you to stop more effectively before a corner."
     },
     {
       icon: <Route className="w-6 h-6" />,
-      title: "The Line",
-      description: "Find the safest and fastest way around the track",
-      content: "Wondering what the line is ?? The line is the safest and fastest way around the track. It might not always be the shortest, but it is surely the most efficient way for braking and acceleration. If you can drive this line smoothly and quickly you will definitely dominate the track. The basic idea of the 'Fast Line' is to make your corner entries as wide as possible."
+      title: "The Racing Line",
+      description: "The fastest and most efficient path around the track",
+      content: "The \"line\" is the fastest and most efficient path around the track. It involves using the full width of the track to make corners as straight as possible, maximizing your speed."
     },
     {
       icon: <RotateCcw className="w-6 h-6" />,
-      title: "Cornering",
+      title: "Cornering Technique",
       description: "Master the art of taking corners efficiently",
-      content: "Kart drivers often turn in too early to corners, try to keep the kart straight for as long as possible before you turn in. Lean your body out of the turn, and not into the turn, and get your body into position well before the turn in point. The trick is to place your kart on the outside of the track. At the right moment, ease onto the brakes firmly staying in a straight line. Come off the break and ease back onto the throttle as you turn into the corner. Maintain the power and aim for the inside edge of the track as you turn into the corner. Maintaining the power is crucial to ensure you have plenty of speed coming out of the turn. It's not how fast you get into the corner but rather how fast you exit. Always remember any sudden movements on the brake, throttle or steering causes resistance and slows you down through the corners, so keep it as smooth as possible."
+      content: "Brake in a straight line before turning smoothly towards the inside apex. Lean your body away from the turn to increase grip, and remember that your exit speed is more important than your entry speed."
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Passing or Overtaking",
-      description: "Two basic techniques to get ahead",
-      content: "There are two basic techniques to overtake:\n\n- The late braking technique: You should be able to outbrake your opponent, so that you get the advantage of the inside, however you will have a tighter line and will be able to pull away with the speed coming out of the corner. Tip: Avoid diving into the corner to avoid accident and disqualification, Make sure the opponent has seen you and if you are not level with him before the opponent starts turning, back off.\n\n- Early exit technique: This technique is to start accelerating before your opponent does, you will need a wider line into the corner and head forward as your opponent is still coming out of the corner."
+      title: "Overtaking",
+      description: "Strategic passing techniques",
+      content: "Pass opponents by braking later on the inside of a corner, ensuring they see you. Alternatively, take a wider line to get on the throttle earlier and pass them with a faster corner exit."
     },
     {
       icon: <CloudRain className="w-6 h-6" />,
       title: "Driving on a Wet Track",
-      description: "Everything works in the opposite direction here",
-      content: "Everything works in the opposite direction here:\n\n- Brake quickly in a very sharp motion so that you dont kill the kart.\n- Turn should be full and hard with your weight shifted forward, it acts as a front brake and the kart turns sharply when it finds a little grip and reduces the chances of sliding and spinning.\n- Shift your weight on to the rear wheels and Accelerate slowly, try to find as much traction as possible."
+      description: "Adapted techniques for wet conditions",
+      content: "In wet conditions, brake in a short, sharp motion. Turn the wheel hard with your weight shifted forward to pivot the kart, then accelerate slowly with your weight on the rear to find traction."
     }
   ];
 

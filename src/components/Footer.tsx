@@ -37,7 +37,7 @@ const Footer = () => {
                     Mysore Road, Bangalore 560 074,<br/>
                     Karnataka, INDIA.
                   </p>
-                  <p className="text-destructive font-bold text-sm mt-3">
+                  <p className="text-destructive font-bold text-lg mt-3">
                     ** We do not have any branches. **
                   </p>
                 </div>

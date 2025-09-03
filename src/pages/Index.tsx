@@ -2,6 +2,8 @@ import HeroSection from "@/components/HeroSection";
 import LocationSection from "@/components/LocationSection";
 import TipsAndTricks from "@/components/TipsAndTricks";
 import BowlingSection from "@/components/BowlingSection";
+import KartSection from "@/components/KartSection";
+import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { KartSection } from "@/components/Kart/KartSection";
 
@@ -57,6 +59,8 @@ const Index = () => {
       <KartSection karts={kartTypes} onAddClick={() => {}} />
       <TipsAndTricks />
       <BowlingSection />
+      <KartSection />
+      <FAQSection />
       <Footer />
     </div>
   );

@@ -125,10 +125,41 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    /* Mobile optimizations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    /* Prevent zoom on iOS */
+    -webkit-text-size-adjust: 100%;
+    /* Better scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
   }
   
   html {
     scroll-behavior: smooth;
+    /* Mobile viewport fix */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px; /* Prevents zoom on iOS input focus */
+    }
+    
+    /* Better touch targets */
+    button, [role="button"], input[type="submit"], input[type="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better spacing on mobile */
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 

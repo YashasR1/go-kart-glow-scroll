@@ -1,0 +1,33 @@
+{
+  "name": "Grips Go-Karting",
+  "short_name": "Grips Karting",
+  "description": "Premium Go-Kart Racing Experience",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#FF4444",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/logo.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["sports", "entertainment"],
+  "screenshots": [
+    {
+      "src": "/lovable-uploads/5b49cc52-0bd9-426e-ae50-2810a3e072e3.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide"
+    }
+  ]
+}

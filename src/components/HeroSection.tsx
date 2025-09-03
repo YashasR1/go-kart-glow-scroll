@@ -8,12 +8,9 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat md:bg-[position:0_-200px]"
       style={{
-        backgroundImage: 'url(/lovable-uploads/5b49cc52-0bd9-426e-ae50-2810a3e072e3.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: '0 -200px',
-        backgroundRepeat: 'no-repeat'
+        backgroundImage: 'url(/lovable-uploads/5b49cc52-0bd9-426e-ae50-2810a3e072e3.png)'
       }}
     >
       {/* Dark overlay for better text readability */}

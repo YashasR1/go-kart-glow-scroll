@@ -31,7 +31,7 @@ const HeroSection = () => {
 
       <div className="flex flex-col items-center pt-[110px] px-4">
         <h1 className="relative figtree-text text-[28px] sm:text-[35px] md:text-[40px] font-bold text-white z-20 text-center w-full tracking-wide">
-          Rev!! Your Engines
+          Let’s Go Racing!
         </h1>
         <p className="relative figtree-text-p text-white/80 z-50 mt-1 text-base sm:text-lg text-center max-w-xl">
           Your ultimate go-karting adventure begins here.

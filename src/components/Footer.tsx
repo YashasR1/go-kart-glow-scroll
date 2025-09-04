@@ -22,11 +22,19 @@ const Footer = () => {
               <div className="flex gap-3">
                 <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div className="space-y-2">
-                  <p className="text-sm">Shabeer: +91 9845011007</p>
-                  <p className="text-sm">Javad: +91 8861011007</p>
-                  <p className="text-sm">Azeem: +91 9902675091</p>
+                  <p className="text-sm">
+                    Shabeer: <a href="tel:+919845011007" className="text-primary ">+91 9845011007</a>
+                  </p>
+                  <p className="text-sm">
+                    Javad: <a href="tel:+918861011007" className="text-primary ">+91 8861011007</a>
+                  </p>
+                  <p className="text-sm">
+                    Azeem: <a href="tel:+919902675091" className="text-primary ">+91 9902675091</a>
+                  </p>
                   <p className="text-sm font-semibold mt-2">Track Details:</p>
-                  <p className="text-sm">Murthy: +91 9845589835</p>
+                  <p className="text-sm">
+                    Murthy: <a href="tel:+919845589835" className="text-primary ">+91 9845589835</a>
+                  </p>
                 </div>
               </div>
               <div className="flex gap-3">

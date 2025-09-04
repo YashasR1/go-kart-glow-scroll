@@ -55,9 +55,9 @@ const TipsAndTricks = () => {
                   <div className="p-2 bg-primary/10 rounded-lg text-primary">
                     {tip.icon}
                   </div>
-                  <div className="text-sm font-semibold text-primary">
+                  {/* <div className="text-sm font-semibold text-primary">
                     1.{index + 1}
-                  </div>
+                  </div> */}
                 </div>
                 <CardTitle className="text-xl">{tip.title}</CardTitle>
                 <CardDescription>{tip.description}</CardDescription>

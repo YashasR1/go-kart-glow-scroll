@@ -19,11 +19,11 @@ const HeroSection = () => {
       className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden pb-8"
     >
       {/* Background image with mobile optimization */}
-      <div className="absolute inset-0 w-full bg-black">
+      <div className="absolute inset-0 w-full bg-black overflow-hidden">
         <img
           src="/heroimage1.png"
           alt="Background"
-          className="object-cover w-full h-full opacity-90"
+          className="object-cover w-full h-full opacity-90 scale-150 sm:scale-100"
           loading="eager"
           fetchPriority="high"
         />

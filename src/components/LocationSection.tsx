@@ -1,10 +1,6 @@
 import { MapPin, Clock, Phone } from "lucide-react";
 
 const LocationSection = () => {
-  const openMaps = () => {
-    // Opens Google Maps with a sample location (you can change this)
-    window.open('https://maps.app.goo.gl/54VswPKNGydgNVPp9', '_blank');
-  };
 
   return (
     <section id="location" className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
@@ -52,21 +48,6 @@ const LocationSection = () => {
   />
 </div>
 
-
-            {/* Interactive Map
-            <div 
-              
-              onClick={openMaps}
-              className="relative h-64 bg-card border border-border rounded-xl overflow-hidden cursor-pointer hover:border-primary transition-all duration-300 group"
-             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <p className="text-lg font-semibold">Click to Get Directions</p>
-                  <p className="text-muted-foreground text-sm">Open in Google Maps</p>
-                </div>
-              </div>
-            </div> */}
 
             {/* Location Details */}
             <div className="bg-card border border-border rounded-xl p-8 hover:border-primary transition-all duration-300">

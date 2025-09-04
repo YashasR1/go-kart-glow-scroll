@@ -233,7 +233,6 @@
   }
 }
 
-
 .figtree-text {
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
@@ -246,4 +245,20 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+
+.exo-text {
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icon-circle {
+  background-color: rgba(10, 10, 10, 0.5); /* 50% black */
+  padding: 0.5rem; /* matches Tailwind p-2 */
+  border-radius: 9999px; /* full circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

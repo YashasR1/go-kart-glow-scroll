@@ -17,17 +17,22 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-
       {/* Background image with mobile optimization */}
       <div className="absolute inset-0 w-full bg-black">
         <img 
           src="/heroimage.png" 
           alt="Background" 
-          className="object-contain md:object-cover w-full h-full"
+          className="object-contain md:object-cover w-full h-full opacity-90"
           loading="eager"
           fetchPriority="high"
         />
       </div>
+
+      {/* Top left corner glow */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-red-500/50 blur-[150px] -translate-x-1/4 -translate-y-1/4 z-10 mix-blend-screen" />
+
+      {/* Bottom right corner glow */}
+      <div className="absolute bottom-0 right-0 w-[250px] h-[250px] rounded-full bg-red-500/50 blur-[150px] translate-x-1/4 translate-y-1/4 z-10 mix-blend-screen" />
       
       {/* Navigation - Desktop */}
       <nav className="hidden md:flex fixed top-8 right-8 z-50 gap-6">

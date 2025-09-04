@@ -41,13 +41,13 @@ const LocationSection = () => {
             {/* Embedded Map */}
                 <div className="relative h-64 md:h-80 bg-card border border-border rounded-xl overflow-hidden">
                   <iframe
-                  src="https://www.google.com/maps/place/Grips+Gokarting+%26+Bowling/@12.8940209,77.4600277,18z/data=!4m6!3m5!1s0x3bae38c8260f661f:0x3850414ed8976f9e!8m2!3d12.893367!4d77.4606182!16s%2Fg%2F1tf9lq1x?authuser=0&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
-                  width="100%"
-                  height="100%"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0 w-full h-full"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.384469154776!2d77.44866937475556!3d12.886825987388392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae39f2c6dc2641%3A0x16a3f9b2d73d8ecd!2sMeco%20Kartopia!5e0!3m2!1sen!2sin!4v1693818821805!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="border-0 w-full h-full"
                   />
                 </div>
 

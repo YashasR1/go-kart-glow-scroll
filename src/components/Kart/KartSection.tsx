@@ -39,7 +39,7 @@ export const KartSection: React.FC<KartSectionProps> = ({
   }
 
   return (
-    <section className="w-full py-16 sm:py-24 px-4 overflow-hidden">
+    <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden">
       {/* Header Badge */}
       <motion.div
         className="flex justify-center"

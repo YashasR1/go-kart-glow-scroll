@@ -15,7 +15,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start pt-36 justify-center overflow-hidden"
     >
       {/* Background image with mobile optimization */}
       <div className="absolute inset-0 w-full bg-black">
@@ -27,6 +27,11 @@ const HeroSection = () => {
           fetchPriority="high"
         />
       </div>
+
+    <div>
+      <h1 className="relative figtree-text text-[40px] font-bold text-white z-20 text-center w-full">Start Your Engines</h1>
+      <p className="relative figtree-text-p text-white/80 z-50 mt-1 text-lg">Your ultimate go-karting adventure begins here.</p>
+    </div>
 
       {/* Top left corner glow */}
       <div className="absolute top-0 left-0 w-[400px] h-[300px] rounded-full bg-red-500/50 blur-[150px] -translate-x-1/4 -translate-y-1/4 z-10 mix-blend-screen" />

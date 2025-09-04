@@ -2,7 +2,7 @@ import { Ruler, MoveHorizontal, Zap } from "lucide-react";
 
 export default function TrackStats() {
   return (
-    <div className="flex flex-wrap justify-center gap-8 md:gap-20 text-white exo-text mb-4 px-4">
+    <div className="flex flex-wrap justify-center gap-8 md:gap-20 text-white exo-text mb-8 px-4">
       {/* Track Length */}
       <div className="flex flex-col items-center">
         <div className="p-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm">

@@ -8,7 +8,7 @@ export default function TrackStats() {
         <div className="p-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm">
           <Ruler className="w-4 h-4 md:w-5 md:h-5 text-white" />
         </div>
-        <p className="text-xl md:text-2xl font-bold mt-2">800m</p>
+        <p className="text-xl md:text-2xl font-bold mt-2">470m</p>
         <p className="text-xs md:text-sm text-gray-400">TRACK LENGTH</p>
       </div>
 
@@ -26,7 +26,7 @@ export default function TrackStats() {
         <div className="border border-white/20 bg-black/50 backdrop-blur-sm p-2 rounded-full">
           <MoveHorizontal className="w-4 h-4 md:w-5 md:h-5 text-white" />
         </div>
-        <p className="text-xl md:text-2xl mt-2 font-bold">8m</p>
+        <p className="text-xl md:text-2xl mt-2 font-bold">7m</p>
         <p className="text-xs md:text-sm text-gray-400">TRACK WIDTH</p>
       </div>
     </div>

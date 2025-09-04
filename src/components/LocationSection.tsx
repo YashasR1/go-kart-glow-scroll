@@ -38,11 +38,25 @@ const LocationSection = () => {
 
           {/* Right Column - Map and Info */}
           <div className="space-y-8">
-            {/* Interactive Map */}
+            {/* Embedded Map */}
+                <div className="relative h-64 md:h-80 bg-card border border-border rounded-xl overflow-hidden">
+                  <iframe
+                  src="https://www.google.com/maps/place/Grips+Gokarting+%26+Bowling/@12.8940209,77.4600277,18z/data=!4m6!3m5!1s0x3bae38c8260f661f:0x3850414ed8976f9e!8m2!3d12.893367!4d77.4606182!16s%2Fg%2F1tf9lq1x?authuser=0&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
+                  width="100%"
+                  height="100%"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="border-0 w-full h-full"
+                  />
+                </div>
+
+            {/* Interactive Map
             <div 
+              
               onClick={openMaps}
               className="relative h-64 bg-card border border-border rounded-xl overflow-hidden cursor-pointer hover:border-primary transition-all duration-300 group"
-            >
+             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
@@ -50,7 +64,7 @@ const LocationSection = () => {
                   <p className="text-muted-foreground text-sm">Open in Google Maps</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Location Details */}
             <div className="bg-card border border-border rounded-xl p-8 hover:border-primary transition-all duration-300">

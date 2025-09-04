@@ -39,17 +39,19 @@ const LocationSection = () => {
           {/* Right Column - Map and Info */}
           <div className="space-y-8">
             {/* Embedded Map */}
-                <div className="relative h-64 md:h-80 bg-card border border-border rounded-xl overflow-hidden">
-                  <iframe
-                  src="https://www.google.com/maps/place/Grips+Gokarting+%26+Bowling/@12.8940209,77.4600277,18z/data=!4m6!3m5!1s0x3bae38c8260f661f:0x3850414ed8976f9e!8m2!3d12.893367!4d77.4606182!16s%2Fg%2F1tf9lq1x?authuser=0&entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
-                  width="100%"
-                  height="100%"
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0 w-full h-full"
-                  />
-                </div>
+                {/* Embedded Map */}
+<div className="relative h-64 md:h-80 bg-card border border-border rounded-xl overflow-hidden">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1944.606500654255!2d77.46002768775325!3d12.894020893584884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae38c8260f661f%3A0x3850414ed8976f9e!2sGrips%20Gokarting%20%26%20Bowling!5e0!3m2!1sen!2sin!4v1756989568650!5m2!1sen!2sin"
+    width="100%"
+    height="100%"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="border-0 w-full h-full"
+  />
+</div>
+
 
             {/* Interactive Map
             <div 

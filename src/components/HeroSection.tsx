@@ -29,7 +29,7 @@ const HeroSection = () => {
       </div>
 
     <div>
-      <h1 className="relative figtree-text text-[40px] font-bold text-white z-20 text-center w-full">Start Your Engines</h1>
+      <h1 className="relative figtree-text text-[40px] font-bold text-white z-20 text-center w-full">Rev up!! Your Engines</h1>
       <p className="relative figtree-text-p text-white/80 z-50 mt-1 text-lg">Your ultimate go-karting adventure begins here.</p>
     </div>
 

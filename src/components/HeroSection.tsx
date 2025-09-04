@@ -15,12 +15,12 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex items-start pt-36 justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start pt-[110px] justify-center overflow-hidden"
     >
       {/* Background image with mobile optimization */}
       <div className="absolute inset-0 w-full bg-black">
         <img 
-          src="/heroimage.png" 
+          src="/heroimage1.png" 
           alt="Background" 
           className="object-contain md:object-cover w-full h-full opacity-90"
           loading="eager"

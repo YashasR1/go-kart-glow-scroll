@@ -35,7 +35,7 @@ const HeroSection = () => {
       <div className="absolute top-0 left-0 sm:w-[400px] sm:h-[300px] w-[300px] h-[200px] rounded-full bg-red-500/50 blur-[150px] -translate-x-1/4 -translate-y-1/4 z-10 mix-blend-screen" />
 
       {/* Bottom right corner glow */}
-      <div className="absolute bottom-0 right-0 w-[220px] h-[120px] sm:w-[250px] sm:h-[250px] rounded-full bg-red-500/50 blur-[150px] translate-x-1/4 translate-y-1/4 z-10 mix-blend-screen" />
+      <div className="absolute bottom-0 right-0 w-[260px] h-[160px] sm:w-[250px] sm:h-[250px] rounded-full bg-red-500/50 blur-[150px] translate-x-1/4 translate-y-1/4 z-10 mix-blend-screen" />
     </section>
   );
 };

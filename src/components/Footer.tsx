@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-4 text-center text-muted-foreground text-sm">
-          <p>&copy; 2025 Grips Gokarting. All rights reserved. | Racing dreams into reality.</p>
+          <p>&copy; 2025 Grips Gokarting. All rights reserved.</p>
         </div>
       </div>
     </footer>

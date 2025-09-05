@@ -25,21 +25,8 @@ export const KartSection: React.FC<KartSectionProps> = ({
     }
   }, [topKarts.length]);
 
-  if (topKarts.length === 0) {
-    return (
-      <div className="text-center py-20 px-6 flex flex-col items-center justify-center min-h-[50vh]">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Client Testimonials
-        </h2>
-        <p className="text-gray-400 mb-8">
-          Be the first to share your experience!
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden">
+    <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden bg-black">
       {/* Header Badge */}
       <motion.div
         className="flex justify-center"

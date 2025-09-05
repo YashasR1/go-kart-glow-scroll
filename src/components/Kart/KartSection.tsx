@@ -35,7 +35,7 @@ export const KartSection: React.FC<KartSectionProps> = ({
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true, amount: 1 }} // reveals only once, when 60% is in view
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4">
           Our Racing <span className="text-primary">Fleet</span>
         </h2>
       </motion.div>

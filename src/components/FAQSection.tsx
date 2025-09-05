@@ -41,7 +41,7 @@ const FAQSection = () => {
     <section id="faq" className="py-20 bg-black">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-muted-foreground text-lg">

@@ -65,7 +65,7 @@ const TipsAndTricks = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Master these professional techniques to dominate the track and
-            become a go-karting champion
+            become a go-karting champion.
           </p>
         </div>
 

@@ -81,7 +81,7 @@ const Navbar = () => {
               className="flex items-center space-x-2 text-white transition-opacity duration-200 z-100"
             >
               <div className="flex items-center">
-                <span className="text-2xl p-0 lg:block hidden figtree-text">
+                <span className="text-2xl p-0 lg:block figtree-text">
                   Grips
                 </span>
               </div>
@@ -191,18 +191,6 @@ const Navbar = () => {
               </a>
             )
           )}
-
-          {/* Mobile Get in Touch Button */}
-          <div className="pt-4">
-            <Button
-              variant="default"
-              className="w-full bg-[#A020F0] hover:bg-[#A020F0] text-white font-medium py-3 rounded-lg transition-all duration-200 ease-out transform hover:scale-[1.01] group"
-              onClick={() => navigate("/contact")}
-            >
-              Get in Touch
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </Button>
-          </div>
         </div>
       </div>
     </motion.nav>

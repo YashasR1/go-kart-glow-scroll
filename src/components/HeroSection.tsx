@@ -1,17 +1,6 @@
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Menu } from "lucide-react";
 import TrackStats from "./Stats";
 
 const HeroSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
@@ -33,7 +22,7 @@ const HeroSection = () => {
         <h1 className="relative figtree-text text-[28px] sm:text-[35px] md:text-[40px] font-bold text-white z-20 text-center w-full tracking-wide">
           Let’s Go Racing!
         </h1>
-        <p className="relative figtree-text-p text-white/80 z-50 mt-1 text-base sm:text-lg text-center max-w-md">
+        <p className="relative figtree-text-p text-white/80 z-20 mt-1 text-base sm:text-lg text-center max-w-[300px] sm:max-w-lg">
           Your ultimate go-karting adventure begins here.
         </p>
       </div>
@@ -43,10 +32,10 @@ const HeroSection = () => {
       </div>
 
       {/* Top left corner glow */}
-      <div className="absolute top-0 left-0 w-[400px] h-[300px] rounded-full bg-red-500/50 blur-[150px] -translate-x-1/4 -translate-y-1/4 z-10 mix-blend-screen" />
+      <div className="absolute top-0 left-0 sm:w-[400px] sm:h-[300px] w-[300px] h-[200px] rounded-full bg-red-500/50 blur-[150px] -translate-x-1/4 -translate-y-1/4 z-10 mix-blend-screen" />
 
       {/* Bottom right corner glow */}
-      <div className="absolute bottom-0 right-0 w-[250px] h-[250px] rounded-full bg-red-500/50 blur-[150px] translate-x-1/4 translate-y-1/4 z-10 mix-blend-screen" />
+      <div className="absolute bottom-0 right-0 w-[220px] h-[120px] sm:w-[250px] sm:h-[250px] rounded-full bg-red-500/50 blur-[150px] translate-x-1/4 translate-y-1/4 z-10 mix-blend-screen" />
     </section>
   );
 };

@@ -56,7 +56,7 @@ const TipsAndTricks = () => {
   return (
     <section
       id="tips"
-      className="py-20 bg-gradient-to-b from-background to-muted/20"
+      className="py-20 bg-black"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">

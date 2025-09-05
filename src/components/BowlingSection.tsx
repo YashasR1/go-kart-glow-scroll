@@ -1,9 +1,9 @@
 const BowlingSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         {/* Bowling Section */}
-        <div className="bg-card border border-border rounded-2xl p-8 md:p-12">
+        <div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Bowling Image Placeholder */}
             <div className="relative">

@@ -73,7 +73,7 @@ const TipsAndTricks = () => {
           {tips.map((tip, index) => (
             <Card
               key={index}
-              className="h-full bg-[#080808] hover:shadow-lg transition-shadow duration-300"
+              className="h-full bg-[#090909] hover:shadow-lg transition-shadow duration-300"
             >
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">

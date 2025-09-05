@@ -6,6 +6,7 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { KartSection } from "@/components/Kart/KartSection";
 import Navbar from "../components/Navbar";
+import BowlingBall from "@/components/Bowling";
 
 
 const kartTypes = [

@@ -5,6 +5,7 @@ import BowlingSection from "@/components/BowlingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import { KartSection } from "@/components/Kart/KartSection";
+import Navbar from "../components/Navbar";
 
 
 const kartTypes = [
@@ -53,6 +54,7 @@ const kartTypes = [
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
       <LocationSection />
       <KartSection karts={kartTypes} onAddClick={() => {}} />

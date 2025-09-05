@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react"
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-card border-t border-border py-16">
+    <footer id="contact" className="bg-card border-t border-border pt-8 pb-4">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -45,9 +45,6 @@ const Footer = () => {
                     Mysore Road, Bangalore 560 074,<br/>
                     Karnataka, INDIA.
                   </p>
-                  <p className="text-destructive font-bold text-lg mt-3">
-                    ** We do not have any branches. **
-                  </p>
                 </div>
               </div>
             </div>
@@ -57,11 +54,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Hours</h4>
             <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
+              <div className="flex">
                 <span className="font-semibold text-foreground">Weekdays :</span>
                 <span>10:30 AM To 6:30 PM</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex">
                 <span className="font-semibold text-foreground">Weekends :</span>
                 <span>10:30 AM To 9:30 PM</span>
               </div>
@@ -98,7 +95,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
+        <div className="border-t border-border mt-8 pt-4 text-center text-muted-foreground text-sm">
           <p>&copy; 2025 Grips Gokarting. All rights reserved. | Racing dreams into reality.</p>
         </div>
       </div>

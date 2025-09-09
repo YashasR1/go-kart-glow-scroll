@@ -1,13 +1,21 @@
+import { motion } from "framer-motion";
+
 const BowlingSection = () => {
   return (
     
     <section className="py-20 bg-black">
+          
       <div className="max-w-7xl mx-auto px-6">
         {/* Bowling Section */}
         <div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Bowling Image Placeholder */}
-            <div className="relative">
+            <motion.div className="relative"
+            initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            viewport={{ once: true, amount: 0.8 }}
+            >  
               <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl overflow-hidden">
                 <img 
                   src="/bowling ball.png" 
@@ -15,10 +23,14 @@ const BowlingSection = () => {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Right - Bowling Description */}
-            <div className="space-y-6">
+            <motion.div className="space-y-6"
+            initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            viewport={{ once: true, amount: 0.8 }}>
               <h3 className="text-3xl font-bold">
                 More Than Just <span className="text-accent">Racing</span>
               </h3>
@@ -34,12 +46,16 @@ const BowlingSection = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   <span className="text-accent">Pricing</span>
                 </h4>
-                <div className="flex justify-between items-center">
+                <motion.div className="flex justify-between items-center"
+                initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+                viewport={{ once: true, amount: 0.8 }}>
                   <span className="text-muted-foreground">All days</span>
                   <span className="text-2xl font-bold text-accent">₹280</span>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

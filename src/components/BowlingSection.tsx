@@ -13,13 +13,13 @@ const BowlingSection = () => {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative h-80 md:h-96 lg:h-112"
+              className="relative w-full h-full md:h-96 lg:h-112"
             >
               <div className="h-full bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
                 <img
                   src="/bowling ball.png"
                   alt="Bowling Ball"
-                  className="w-80 h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
+                  className="w-full h-full sm:w-80 sm:h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
                 />
               </div>
             </motion.div>

@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Target, Route, RotateCcw, Zap, CloudRain, Sun } from "lucide-react";
+import { motion } from "framer-motion";
 
 const TipsAndTricks = () => {
   const tips = [
@@ -54,12 +55,15 @@ const TipsAndTricks = () => {
   ];
 
   return (
-    <section
-      id="tips"
-      className="py-20 bg-black"
-    >
+    <section id="tips" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true, amount: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">
             Racing <span className="text-primary">Tips & Tricks</span>
           </h2>
@@ -67,29 +71,37 @@ const TipsAndTricks = () => {
             Master these professional techniques to dominate the track and
             become a go-karting champion.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tips.map((tip, index) => (
-            <Card
+            <motion.div
+              initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true, amount: 0.8 }}
               key={index}
-              className="h-full bg-[#090909] hover:shadow-lg transition-shadow duration-300"
             >
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="p-2 bg-primary/10 rounded-lg text-primary">
-                    {tip.icon}
+              <Card
+                key={index}
+                className="h-full bg-[#090909] hover:shadow-lg transition-shadow duration-300"
+              >
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                      {tip.icon}
+                    </div>
                   </div>
-                </div>
-                <CardTitle className="text-xl">{tip.title}</CardTitle>
-                <CardDescription>{tip.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">
-                  {tip.content}
-                </p>
-              </CardContent>
-            </Card>
+                  <CardTitle className="text-xl">{tip.title}</CardTitle>
+                  <CardDescription>{tip.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground text-sm leading-relaxed whitespace-pre-line">
+                    {tip.content}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

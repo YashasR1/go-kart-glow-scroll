@@ -1,17 +1,17 @@
 const BowlingSection = () => {
   return (
-    <section className="py-20 bg-black">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-10 bg-black">
+      <div className="max-w-[1280px] mx-auto px-6">
         {/* Bowling Section */}
-        <div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-12">
+        <div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Bowling Image Placeholder */}
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl overflow-hidden">
-                <img 
-                  src="/bowling ball.png" 
-                  alt="Bowling Ball" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            <div className="relative h-80 md:h-96 lg:h-112">
+              <div className="h-full bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
+                <img
+                  src="/bowling ball.png"
+                  alt="Bowling Ball"
+                  className="w-80 h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
                 />
               </div>
             </div>

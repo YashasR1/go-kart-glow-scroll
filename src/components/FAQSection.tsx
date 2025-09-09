@@ -64,7 +64,7 @@ const FAQSection = () => {
               viewport={{ once: true, amount: 0.8 }}
             >
               <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-lg font-semibold hover:text-primary">
+              <AccordionTrigger className="text-md font-semibold hover:text-primary">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground">

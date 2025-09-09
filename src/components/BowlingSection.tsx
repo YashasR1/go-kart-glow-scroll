@@ -5,16 +5,15 @@ const BowlingSection = () => {
     <section className="py-10 bg-black">
       <div className="max-w-[1280px] mx-auto px-6">
         {/* Bowling Section */}
-        <div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left - Bowling Image Placeholder */}
-            <motion.div
+        <motion.div className="bg-[#080808] border border-border rounded-2xl p-8 md:p-8"
               initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true, amount: 0.8 }}
-              className="relative h-80 md:h-96 lg:h-112"
-            >
+              >
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left - Bowling Image Placeholder */}
+            <div>
               <div className="h-full bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
                 <img
                   src="/bowling ball.png"
@@ -22,7 +21,7 @@ const BowlingSection = () => {
                   className="w-80 h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Right - Bowling Description */}
             <motion.div
@@ -65,7 +64,7 @@ const BowlingSection = () => {
               </div>
             </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

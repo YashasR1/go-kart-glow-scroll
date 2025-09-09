@@ -6,9 +6,10 @@ const LocationSection = () => {
     <section id="location" className="sm:py-20 px-6 bg-black py-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
-          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+          initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, amount: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">

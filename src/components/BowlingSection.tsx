@@ -30,7 +30,7 @@ const BowlingSection = () => {
               initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-              viewport={{ once: true, amount: 0.8 }}
+              viewport={{ once: true, amount: 0.4 }}
             >
               <h3 className="text-3xl font-bold">
                 More Than Just <span className="text-accent">Racing</span>
@@ -57,7 +57,7 @@ const BowlingSection = () => {
                   initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
                   whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
-                  viewport={{ once: true, amount: 0.8 }}
+                  viewport={{ once: true, amount: 0.4 }}
                 >
                   <span className="text-muted-foreground">All days</span>
                   <span className="text-2xl font-bold text-accent">₹280</span>

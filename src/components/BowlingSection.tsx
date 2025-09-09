@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "./Image";
 
 const BowlingSection = () => {
   return (
@@ -9,16 +10,16 @@ const BowlingSection = () => {
               initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-              viewport={{ once: true, amount: 0.8 }}
+              viewport={{ once: true, amount: 0.4 }}
               >
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left - Bowling Image Placeholder */}
             <div>
-              <div className="h-full bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
-                <img
+              <div className="bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
+                <Image
                   src="/bowling ball.png"
                   alt="Bowling Ball"
-                  className="w-full h-full sm:w-80 sm:h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
+                  className="w-[80%] h-[80%] hover:scale-105 transition-transform duration-300 mx-auto my-auto"
                 />
               </div>
             </div>

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const BowlingSection = () => {
   return (
     <section className="py-10 bg-black">
@@ -14,10 +16,14 @@ const BowlingSection = () => {
                   className="w-80 h-80 hover:scale-105 transition-transform duration-300 mx-auto my-auto"
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Right - Bowling Description */}
-            <div className="space-y-6">
+            <motion.div className="space-y-6"
+            initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            viewport={{ once: true, amount: 0.8 }}>
               <h3 className="text-3xl font-bold">
                 More Than Just <span className="text-accent">Racing</span>
               </h3>
@@ -33,12 +39,16 @@ const BowlingSection = () => {
                 <h4 className="text-lg font-semibold mb-2">
                   <span className="text-accent">Pricing</span>
                 </h4>
-                <div className="flex justify-between items-center">
+                <motion.div className="flex justify-between items-center"
+                initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+                viewport={{ once: true, amount: 0.8 }}>
                   <span className="text-muted-foreground">All days</span>
                   <span className="text-2xl font-bold text-accent">₹280</span>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

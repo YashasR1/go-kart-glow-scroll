@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -40,14 +41,18 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-20 bg-black">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <motion.div className="text-center mb-16"
+            initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
+            viewport={{ once: true, amount: 0.8 }}>
           <h2 className="text-4xl font-bold mb-4">
             Frequently Asked <span className="text-primary">Questions</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Find answers to common questions about our karting experience
           </p>
-        </div>
+        </motion.div>
 
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (

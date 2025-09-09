@@ -1,14 +1,20 @@
 import { MapPin, Clock, Phone } from "lucide-react";
+import { motion } from "framer-motion";
 
 const LocationSection = () => {
   return (
     <section id="location" className="sm:py-20 px-6 bg-black py-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">
             Find Us on the <span className="text-primary">Track</span>
           </h2>
-        </div>
+        </motion.div>
 
         <div className="gap-12 items-center">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-12">

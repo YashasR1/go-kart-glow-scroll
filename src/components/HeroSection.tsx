@@ -1,14 +1,19 @@
 import TrackStats from "./Stats";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
-
   return (
     <section
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-between overflow-hidden pb-8"
     >
       {/* Background image with mobile optimization */}
-      <div className="absolute inset-0 w-full bg-black overflow-hidden">
+      <motion.div
+        className="absolute inset-0 w-full bg-black overflow-hidden"
+        initial={{ opacity: 0, filter: "blur(10px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+      >
         <img
           src="/heroimage1.png"
           alt="Background"
@@ -16,17 +21,22 @@ const HeroSection = () => {
           loading="eager"
           fetchPriority="high"
         />
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col items-center pt-[110px] px-4">
+      <motion.div
+        initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+        className="flex flex-col items-center pt-[110px] px-4"
+      >
         <h1 className="relative figtree-text text-[28px] sm:text-[35px] md:text-[40px] font-bold text-white z-20 text-center w-full tracking-wide">
           Let’s Go Racing!
         </h1>
         <p className="relative figtree-text-p text-white/80 z-20 mt-1 text-base sm:text-lg text-center max-w-[300px] sm:max-w-lg">
           Your ultimate go-karting adventure begins here.
         </p>
-      </div>
-      
+      </motion.div>
+
       <div className="relative z-20 mt-auto">
         <TrackStats />
       </div>

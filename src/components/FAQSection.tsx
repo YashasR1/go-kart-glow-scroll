@@ -56,7 +56,14 @@ const FAQSection = () => {
 
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="text-lg font-semibold hover:text-primary">
                 {faq.question}
               </AccordionTrigger>
@@ -64,6 +71,7 @@ const FAQSection = () => {
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
+            </motion.div>
           ))}
         </Accordion>
       </div>

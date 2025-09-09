@@ -60,7 +60,7 @@ const FAQSection = () => {
               key={index}
               initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.9 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
               viewport={{ once: true, amount: 0.8 }}
             >
               <AccordionItem key={index} value={`item-${index}`}>

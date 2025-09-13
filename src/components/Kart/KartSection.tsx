@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { KartCard } from "./KartCard";
 import { Kart } from "@/lib/types";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface KartSectionProps {
   karts: Kart[];
@@ -13,17 +14,26 @@ export const KartSection: React.FC<KartSectionProps> = ({
   onAddClick,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const topKarts = [...karts];
 
+  const navigateToKart = (direction: 'prev' | 'next') => {
+    if (direction === 'next') {
+      setActiveIndex((current) => (current + 1) % topKarts.length);
+    } else {
+      setActiveIndex((current) => (current - 1 + topKarts.length) % topKarts.length);
+    }
+  };
+
   useEffect(() => {
-    if (topKarts.length > 1) {
+    if (topKarts.length > 1 && !isHovered) {
       const interval = setInterval(() => {
         setActiveIndex((current) => (current + 1) % topKarts.length);
       }, 3000);
       return () => clearInterval(interval);
     }
-  }, [topKarts.length]);
+  }, [topKarts.length, isHovered]);
 
   return (
     <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden bg-black">
@@ -57,7 +67,28 @@ export const KartSection: React.FC<KartSectionProps> = ({
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true, amount: 0.8 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
+        {/* Navigation Controls - Only show when hovering and multiple karts */}
+        {isHovered && topKarts.length > 1 && (
+          <>
+            <button
+              onClick={() => navigateToKart('prev')}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-primary/50"
+              aria-label="Previous kart"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={() => navigateToKart('next')}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-primary/50"
+              aria-label="Next kart"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </>
+        )}
         {topKarts.map((kart, index) => {
           const offset =
             (index - activeIndex + topKarts.length) %

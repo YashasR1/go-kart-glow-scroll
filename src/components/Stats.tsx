@@ -8,7 +8,7 @@ export default function TrackStats() {
       <motion.div
         initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
         className="flex flex-col items-center"
       >
         <div className="p-2 rounded-full border border-white/20 bg-black/50 backdrop-blur-sm">
@@ -22,7 +22,7 @@ export default function TrackStats() {
       <motion.div
         initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1.0 }}
         className="flex flex-col items-center"
       >
         <div className="border border-white/20 bg-black/50 backdrop-blur-sm p-2 rounded-full">
@@ -36,7 +36,7 @@ export default function TrackStats() {
       <motion.div
         initial={{ opacity: 0, y: 40, filter: "blur(4px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 1.2 }}
         className="flex flex-col items-center"
       >
         <div className="border border-white/20 bg-black/50 backdrop-blur-sm p-2 rounded-full">

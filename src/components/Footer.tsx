@@ -65,34 +65,6 @@ const Footer = () => {
               <p className="text-foreground text-sm mt-4 italic font-medium">Please contact between 10:30 AM to 7:00 PM</p>
             </div>
           </div>
-
-          {/* Social Media */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Follow Us</h4>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Tag us in your racing photos for a chance to be featured!
-            </p>
-          </div>
         </div>
 
         <div className="border-t border-border mt-8 pt-4 text-center text-muted-foreground text-sm">

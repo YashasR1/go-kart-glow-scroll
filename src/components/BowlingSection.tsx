@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Image from "./Image";
 
 const BowlingSection = () => {
   return (
@@ -16,10 +15,11 @@ const BowlingSection = () => {
             {/* Left - Bowling Image Placeholder */}
             <div>
               <div className="bg-gradient-to-br from-red-600 to-black/10 rounded-xl">
-                <Image
+                <img
                   src="/bowling ball.png"
                   alt="Bowling Ball"
                   className="w-[80%] h-[80%] hover:scale-105 transition-transform duration-300 mx-auto my-auto"
+                  loading="lazy"
                 />
               </div>
             </div>

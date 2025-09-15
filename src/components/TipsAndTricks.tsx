@@ -76,10 +76,7 @@ const TipsAndTricks = () => {
               viewport={{ once: true, amount: 0.8 }}
               key={index}
             >
-              <Card
-                key={index}
-                className="h-full bg-[#090909] hover:shadow-lg transition-shadow duration-300"
-              >
+              <Card className="h-full bg-[#090909] hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
                     <div className="p-2 bg-primary/10 rounded-lg text-primary">

@@ -16,24 +16,24 @@ export const KartSection: React.FC<KartSectionProps> = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  const topKarts = [...karts];
+  // Optimize: Use karts directly instead of creating a copy
 
   const navigateToKart = (direction: 'prev' | 'next') => {
     if (direction === 'next') {
-      setActiveIndex((current) => (current + 1) % topKarts.length);
+      setActiveIndex((current) => (current + 1) % karts.length);
     } else {
-      setActiveIndex((current) => (current - 1 + topKarts.length) % topKarts.length);
+      setActiveIndex((current) => (current - 1 + karts.length) % karts.length);
     }
   };
 
   useEffect(() => {
-    if (topKarts.length > 1 && !isHovered) {
+    if (karts.length > 1 && !isHovered) {
       const interval = setInterval(() => {
-        setActiveIndex((current) => (current + 1) % topKarts.length);
+        setActiveIndex((current) => (current + 1) % karts.length);
       }, 3000);
       return () => clearInterval(interval);
     }
-  }, [topKarts.length, isHovered]);
+  }, [karts.length, isHovered]);
 
   return (
     <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden bg-black">
@@ -71,7 +71,7 @@ export const KartSection: React.FC<KartSectionProps> = ({
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Navigation Controls - Only show when hovering and multiple karts */}
-        {isHovered && topKarts.length > 1 && (
+        {isHovered && karts.length > 1 && (
           <>
             <button
               onClick={() => navigateToKart('prev')}
@@ -89,16 +89,16 @@ export const KartSection: React.FC<KartSectionProps> = ({
             </button>
           </>
         )}
-        {topKarts.map((kart, index) => {
+        {karts.map((kart, index) => {
           const offset =
-            (index - activeIndex + topKarts.length) %
-            topKarts.length;
+            (index - activeIndex + karts.length) %
+            karts.length;
 
           let transform = "scale(0.7) translateX(0) translateY(40px)";
           let opacity = "0";
           let zIndex = 0;
 
-          if (topKarts.length === 1) {
+          if (karts.length === 1) {
             transform = "scale(1) translateX(0) translateY(0)";
             opacity = "1";
             zIndex = 2;
@@ -113,7 +113,7 @@ export const KartSection: React.FC<KartSectionProps> = ({
               transform = "scale(0.8) translateX(70%) translateY(30px)";
               opacity = "0.4";
               zIndex = 1;
-            } else if (offset === topKarts.length - 1) {
+            } else if (offset === karts.length - 1) {
               // Previous card
               transform = "scale(0.8) translateX(-70%) translateY(30px)";
               opacity = "0.4";

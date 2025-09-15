@@ -26,7 +26,7 @@ const Footer = () => {
                     Shabeer: <a href="tel:+919845011007" className="text-primary ">+91 9845011007</a>
                   </p>
                   <p className="text-sm">
-                    Javad: <a href="tel:+918861011007" className="text-primary ">+91 8861011007</a>
+                    Javed: <a href="tel:+918861011007" className="text-primary ">+91 8861011007</a>
                   </p>
                   <p className="text-sm">
                     Azeem: <a href="tel:+919902675091" className="text-primary ">+91 9902675091</a>

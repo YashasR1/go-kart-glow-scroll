@@ -11,7 +11,7 @@ const KartSection = () => {
     },
     {
       name: "Twin Kart",
-      age: "child above 5 years and below 7 years", 
+      age: "Children above 5 years and below 7 years", 
       icon: "/Twin-Kart-Large.png",
       description: "Low powered and high handling capability.",
       price : "Rs. 500/- for 6 Laps"

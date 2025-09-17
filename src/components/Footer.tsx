@@ -26,7 +26,7 @@ const Footer = () => {
                     Shabeer: <a href="tel:+919845011007" className="text-primary ">+91 9845011007</a>
                   </p>
                   <p className="text-sm">
-                    Javad: <a href="tel:+918861011007" className="text-primary ">+91 8861011007</a>
+                    Javed: <a href="tel:+918861011007" className="text-primary ">+91 8861011007</a>
                   </p>
                   <p className="text-sm">
                     Azeem: <a href="tel:+919902675091" className="text-primary ">+91 9902675091</a>
@@ -64,34 +64,6 @@ const Footer = () => {
               </div>
               <p className="text-foreground text-sm mt-4 italic font-medium">Please contact between 10:30 AM to 7:00 PM</p>
             </div>
-          </div>
-
-          {/* Social Media */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Follow Us</h4>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Tag us in your racing photos for a chance to be featured!
-            </p>
           </div>
         </div>
 

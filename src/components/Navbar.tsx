@@ -65,7 +65,7 @@ const Navbar = () => {
       id="navbar"
       initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-      transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 2.4 }}
       className={`max-w-6xl mx-auto fixed lg:top-4 lg:left-6 lg:right-6 top-0 left-0 right-0 z-50 lg:border border-b border-1 lg:border-1 lg:rounded-xl border-gray-700 bg-transparent transition-all duration-300 ease-out ${
         isScrolled ? "backdrop-blur-md shadow-lg" : ""
       }`}

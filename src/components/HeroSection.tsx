@@ -10,12 +10,12 @@ const HeroSection = () => {
       {/* Background image with mobile optimization */}
       <motion.div
         className="absolute inset-0 w-full bg-black overflow-hidden"
-        initial={{ opacity: 0, filter: "blur(10px)" }}
+        initial={{ opacity: 0, filter: "blur(4px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
       >
         <img
-          src="/heroimage1.png"
+          src="/heroimage1.webp"
           alt="Background"
           className="object-cover w-full h-full opacity-90 scale-150 sm:scale-100"
           loading="eager"
@@ -24,7 +24,7 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: -40, filter: "blur(10px)" }}
+        initial={{ opacity: 0, y: -40, filter: "blur(4px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
         className="flex flex-col items-center pt-[110px] px-4"

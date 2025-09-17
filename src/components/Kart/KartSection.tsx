@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { KartCard } from "./KartCard";
 import { Kart } from "@/lib/types";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface KartSectionProps {
   karts: Kart[];
@@ -15,8 +16,10 @@ export const KartSection: React.FC<KartSectionProps> = ({
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
-  // Optimize: Use karts directly instead of creating a copy
+  const [isTouched, setIsTouched] = useState(false);
+  const isMobile = useIsMobile();
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   const navigateToKart = (direction: 'prev' | 'next') => {
     if (direction === 'next') {
@@ -26,14 +29,44 @@ export const KartSection: React.FC<KartSectionProps> = ({
     }
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!isMobile) return;
+    touchStartX.current = e.touches[0].clientX;
+    setIsTouched(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isMobile) return;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!isMobile) return;
+    
+    const swipeThreshold = 50;
+    const swipeDistance = touchStartX.current - touchEndX.current;
+    
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0) {
+        // Swiped left, go to next
+        navigateToKart('next');
+      } else {
+        // Swiped right, go to previous
+        navigateToKart('prev');
+      }
+    }
+    
+    setTimeout(() => setIsTouched(false), 1000);
+  };
+
   useEffect(() => {
-    if (karts.length > 1 && !isHovered) {
+    if (karts.length > 1 && !isHovered && !isTouched) {
       const interval = setInterval(() => {
         setActiveIndex((current) => (current + 1) % karts.length);
       }, 3000);
       return () => clearInterval(interval);
     }
-  }, [karts.length, isHovered]);
+  }, [karts.length, isHovered, isTouched]);
 
   return (
     <section id="karts" className="w-full py-16 sm:py-24 px-4 overflow-hidden bg-black">
@@ -69,9 +102,12 @@ export const KartSection: React.FC<KartSectionProps> = ({
         viewport={{ once: true, amount: 0.8 }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
-        {/* Navigation Controls - Only show when hovering and multiple karts */}
-        {isHovered && karts.length > 1 && (
+        {/* Navigation Controls - Only show when hovering and multiple karts on desktop */}
+        {isHovered && karts.length > 1 && !isMobile && (
           <>
             <button
               onClick={() => navigateToKart('prev')}
